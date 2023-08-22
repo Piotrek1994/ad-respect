@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>adRespect</title>
+  </head>
+
+  <body>
+    <div class="max-w-7xl m-auto">
+      <nav class="px-4 py-6 flex justify-between items-center bg-white">
+        <a class="text-3xl font-bold leading-none" href="#">
+          <img
+            src="../assets/giarddesign-black.png"
+            alt="giarddesign logo"
+            width="115"
+            height="19"
+          />
+        </a>
+        <div class="lg:hidden">
+          <button class="navbar-burger flex items-center p-3">
+            <svg
+              class="block h-4 w-4 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6">
+          <li>
+            <div class="dropdown inline-block relative">
+              <button class="px-5 inline-flex items-center">
+                <span class="mr-1 text-sm text-my-black">Oferta</span>
+                <svg
+                  class="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="dropdown-menu drop-shadow absolute hidden pt-1"
+                style="z-index: 999"
+              >
+                <li class="">
+                  <a
+                    class="rounded-t bg-white text-my-black py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                    >Oferta 1</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    class="bg-white text-my-black py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                    >Oferta 2</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    class="rounded-b text-my-black bg-white py-2 px-4 block whitespace-no-wrap"
+                    href="#"
+                    >Oferta 3</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="px-5 m-0">
+            <a class="text-sm text-my-black" href="#">O firmie</a>
+          </li>
+
+          <li class="px-5 m-0">
+            <a class="text-sm text-my-black" href="#">Realizacje</a>
+          </li>
+
+          <li class="px-5">
+            <a class="text-sm text-my-black" href="#">Kontakt</a>
+          </li>
+          <li class="relative">
+            <input type="checkbox" id="toggleForm" class="hidden" />
+            <label for="toggleForm">
+              <img
+                class="w-6 cursor-pointer"
+                src="../assets/nav-glass.png"
+                alt="magnifying glass"
+              />
+            </label>
+
+            <form class="hidden top-full left-0" id="myForm">
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-my-black sr-only dark:text-white"
+                >Wyszukaj</label
+              >
+              <div class="my-form w-64">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="block w-full p-2 pl-10 text-sm text-my-black border border-gray-300 rounded-lg bg-gray-50"
+                  placeholder="Wyszukaj..."
+                  required
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute right-2.5 bottom-1.5 bg-primary hover:bg-primary-hover font-medium rounded-lg text-sm px-4 py-1"
+                >
+                  Wyszukaj
+                </button>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex  flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">
+              <img
+                src="../assets/giarddesign-black.png"
+                alt="giarddesign logo"
+                width="115"
+                height="19"
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <div
+                  class="dropdown inline-block relative text-sm font-semibold"
+                >
+                  <a class="py-2 px-4 inline-block whitespace-no-wrap" href="#">
+                    <button
+                      id="dropdownButton"
+                      class="inline-flex items-center dropdown-btn"
+                    >
+                      <span class="mr-1 text-my-black">Oferta</span>
+                      <svg
+                        class="fill-current h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                  <ul
+                    class="dropdown-menu-mobile hidden pt-1 font-normal"
+                  >
+                    <li class="pl-4 pr-0">
+                      <a
+                        class="rounded-t py-2 inline-block whitespace-no-wrap text-my-black"
+                        href="#"
+                        >Oferta 1</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        class="py-2 px-4 inline-block whitespace-no-wrap text-my-black"
+                        href="#"
+                        >Oferta 2</a
+                      >
+                    </li>
+                    <li class="">
+                      <a
+                        class="rounded-b py-2 px-4 whitespace-no-wrap inline-block text-my-black"
+                        href="#"
+                        >Oferta 3</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mb-1">
+                <a class="inline-block p-4 text-sm font-semibold text-my-black" href="#"
+                  >O firmie</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="inline-block p-4 text-sm font-semibold text-my-black" href="#realization"
+                  >Realizacje</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="inline-block p-4 text-sm font-semibold text-my-black" href="#"
+                  >Kontakt</a
+                >
+              </li>
+              
+              
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <section>
+      <div id="default-carousel" class="relative w-full" data-carousel="static">
+        
+        <div
+          class="relative h-34rem overflow-hidden rounded-lg md:h-34rem lg:h-34rem xl:h-44rem"
+        >
+          
+          <div
+            class="duration-700 ease-in-out flex flex-col lg:flex-row"
+            data-carousel-item
+          >
+            <div
+              class="w-full h-full lg:w-1/2 relative bg-primary flex justify-end"
+            >
+              <div class="m-auto max-w-screen-sm px-6 lg:py-36 py-4 xl:pr-32">
+                <h1 class="2xl:text-6xl xl:text-4xl text-3xl mb-11 text-my-black">
+                  Nowoczesna aranżacja Twojego ogrodu
+                </h1>
+                <p class="text-base mb-20 text-my-black">
+                  Marka GiardDesign to wieloletnie doświadczenie i wysoka
+                  estetyka realizacji. Oferujemy kompleksowy zakres usług z
+                  indywidualnym podejściem do każdego projektu.
+                </p>
+                <div class="flex flex-col sm:flex-row">
+                  <a href=""><button
+                    class="mb-4 sm:mb-0 pt-3 pb-3.5 px-6 mr-0 sm:mr-2 xl:mr-9 text-white bg-secondary rounded-3xl text-base"
+                  >
+                    Skontaktuj się z nami
+                  </button></a>
+                  <a href="#realization"><button
+                    class="flex items-center justify-center pt-3 pb-3.5 px-6 text-secondary bg-transparent rounded-3xl text-base border border-secondary"
+                  >
+                    Zobacz nasze realizacje
+                    <span class="ml-2"
+                      ><svg
+                        width="16"
+                        height="17"
+                        viewBox="0 0 16 17"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z"
+                          fill="#1B5B31"
+                        />
+                      </svg>
+                    </span>
+                  </button></a>
+                </div>
+              </div>
+            </div>
+            <div class="w-0 lg:w-1/2 relative">
+              <img
+                src="../assets/hero-background.png"
+                class="block w-full"
+                alt="background"
+              />
+            </div>
+          </div>
+
+          <div
+            class="hidden duration-700 ease-in-out bg-primary"
+            data-carousel-item
+          >
+            <img
+              src="../assets/hero-cat.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="cat"
+            />
+          </div>
+        
+          <div
+            class="hidden duration-700 ease-in-out bg-primary"
+            data-carousel-item
+          >
+            <img
+              src="../assets/hero-dog.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="dog"
+            />
+          </div>
+        
+          <div
+            class="hidden duration-700 ease-in-out bg-primary"
+            data-carousel-item
+          >
+            <img
+              src="../assets/hero-duck.jpg"
+              class="absolute bg-top w-full block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="duck"
+            />
+          </div>
+          
+          <div
+            class="hidden duration-700 ease-in-out bg-primary"
+            data-carousel-item
+          >
+            <img
+              src="../assets/hero-squirrel.jpg"
+              class="absolute bg-top block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="squirrel"
+            />
+          </div>
+        </div>
+       
+        <div
+          class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+        
+        <button
+          type="button"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Poprzedni</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Następny</span>
+          </span>
+        </button>
+      </div>
+    </section>
+    <section class="bg-background px-4 lg:pb-40">
+      <div class="max-w-5xl m-auto p-10">
+        <p class="text-xs text-secondary mb-4 lg:pt-40">Oferta</p>
+        <div class="max-w-2xl">
+          <h2 class="text-5xl mb-8 text-my-black">
+            Działamy <span class="italic">kompleksowo</span>
+          </h2>
+          <p class="text-base pb-24 text-my-black">
+            Oferujemy kompletną obsługę inwestycji terenów zielonych.
+            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+            Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
+            a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
+          </p>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl m-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-16"
+      >
+        <div class="card py-12 px-10 bg-white rounded-3xl">
+          <div class="flex flex-col">
+            <img
+              src="../assets/card-icon-pen.png"
+              alt="icon of pen"
+              width="44"
+            />
+            <p class="text-28 mt-32 mb-3 text-my-black">Projekty</p>
+            <p class="text-my-black">
+              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+              wykorzystaniem istniejącej przestrzeni.
+            </p>
+          </div>
+          <div class="mt-63 inline-flex items-center card-btn">
+            <a href="#" class="flex items-center">
+              <p class="text-secondary ">Dowiedz się więcej</p>
+              <span class="pl-2"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                    fill="#1B5B31"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card py-12 px-10 bg-white rounded-3xl">
+          <div class="flex flex-col">
+            <img
+              src="../assets/card-icon-eye.png"
+              alt="icon of eye"
+              width="44"
+            />
+            <p class="text-28 mt-32 mb-3 text-my-black">Wizualizacje</p>
+            <p class="text-my-black">
+              Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
+              animowanego w technologii 3D.
+            </p>
+          </div>
+          <div class="mt-63 inline-flex items-center card-btn">
+            <a href="#" class="flex items-center">
+              <p class="text-secondary">Dowiedz się więcej</p>
+              <span class="pl-2"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                    fill="#1B5B31"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="card py-12 px-10 bg-white rounded-3xl">
+          <div class="flex flex-col">
+            <img
+              src="../assets/card-icon-sparks.png"
+              alt="icon of sparks"
+              width="44"
+            />
+            <p class="text-28 mt-32 mb-3 text-my-black">Realizacje</p>
+            <p class="text-my-black">
+              Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+              zaawansowanych technologii.
+            </p>
+          </div>
+          <div class="mt-63 inline-flex items-center card-btn">
+            <a href="#realization" class="flex items-center">
+              <p class="text-secondary">Zobacz nasze realizacje</p>
+              <span class="pl-2"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                    fill="#1B5B31"
+                  />
+                </svg> </span
+            ></a>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-col lg:flex-row">
+        <div class="lg:w-1/2 bg-secondary">
+          <img
+            class="lg:m-0 m-auto"
+            src="../assets/about-photo.png"
+            alt="wooden house"
+          />
+        </div>
+        <div class="bg-secondary w-full lg:w-1/2">
+          <div class="max-w-lg lg:ml-12 xl:ml-24 lg:p-6 lg:m-0 m-auto p-4">
+            <p class="text-xs text-background mb-4 lg:pt-16 xl:pt-40">O firmie</p>
+            <div class="max-w-2xl">
+              <h2 class="text-5xl mb-8 text-background columns-1">
+                Tworzymy<br />
+                z<span class="italic"> pasją</span>
+              </h2>
+              <p class="text-base pb-16 text-background">
+                Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                wykwalifikowani projektanci oraz architekci, których zadaniem
+                jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+                minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                małoobsługowe, dostosowane do współczesnego trybu życia.
+              </p>
+            </div>
+            <button
+              class="flex items-center pt-3 pb-3.5 px-6 text-background bg-transparent rounded-3xl text-base border border-background"
+            >
+              Poznaj nasz bliżej
+              <span class="ml-2"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                    fill="#F5F0EC"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="realization" class="bg-primary">
+     
+      <div class="relative py-5 md:py-10">
+        <div class="max-w-7xl mx-auto sm:mb-24 mb-4 p-4">
+          <p class="text-secondary text-xs">Realizacje</p>
+          <h3 class="text-5xl mb-8 text-my-black columns-1">
+            Nasze<span class="italic">projekty</span>
+          </h3>
+        </div>
+        <div
+          class="relative mb-10 columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8" id="masonryGrid"
+        >
+          <img src="https://source.unsplash.com/ztpUS4N1xhY" alt="" />
+          <img src="https://source.unsplash.com/mPFSPqZOO7s" alt="" />
+          <img src="https://source.unsplash.com/uPEnxrdSKIw" alt="" />
+          <img src="https://source.unsplash.com/hFKZ5-OT9Ys" alt="" />
+          <img src="https://source.unsplash.com/xoTt2fjs7d0" alt="" />
+          <img src="https://source.unsplash.com/Vc2dD4l57og" alt="" />
+          <img src="https://source.unsplash.com/hqnQWmIt3cY" alt="" />
+          <img src="https://source.unsplash.com/NTGg2rtWDwg" alt="" />
+          <img src="https://source.unsplash.com/uyX3qAQhZVA" alt="" />
+          <img src="https://source.unsplash.com/LV-NvIcA-Gg" alt="" />
+          <img src="https://source.unsplash.com/0qnRfgnZIsI" alt="" />
+          <img src="https://source.unsplash.com/mpwF3Mv2UaU" alt="" />
+          <img src="https://source.unsplash.com/gfMWhkDCwYM" alt="" />
+          <img src="https://source.unsplash.com/8KtqjrskUg8" alt="" />
+          <img src="https://source.unsplash.com/qAaGXj-AOv4" alt="" />
+        </div>
+        <div class="absolute bottom-0 block-gradient w-full"><img class="w-full" src="../assets/block-gradient.png" alt="block gradient" ></div>
+        
+        <button id="loadMoreButton" class=" flex absolute z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center pt-3 pb-3.5 px-6 text-my-black bg-transparent rousnded-3xl text-base border rounded-3xl border-my-black">Rozwiń<span class="ml-2"
+          ><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8.49529L15.1043 7.59959L8.63642 14.0769L8.63642 0.5L7.36358 0.5L7.36358 14.0675L0.895699 7.59959L9.54553e-08 8.49529L8.00471 16.5L16 8.49529Z" fill="#111111"/>
+            </svg>
+            
+        </span></button>
+       
+        
+      </div>
+    </section>
+    <section>
+      <div class="max-w-5xl mx-auto my-16 px-4 sm:px-6 lg:px-8">
+          <div class="m-auto p-8 sm:p-12 lg:p-28 bg-secondary">
+              <div class="flex flex-col sm:flex-row items-center">
+                  <p class="text-2xl sm:text-3xl lg:text-4xl mb-8 text-background mr-0 sm:mr-16">
+                      Zostańmy w kontakcie! <br class="hidden sm:block" /> Znajdziesz nas na <span class="italic">Instagramie.</span>
+                  </p>
+                  <div class="ml-1 flex flex-col justify-between mt-6 sm:mt-0">
+                      <p class="text-base text-background mb-4">
+                          Śledź nasze <br class="hidden sm:block" />najnowsze realizacje!
+                      </p>
+                      <button class="pt-3 pb-3.5 px-6 text-secondary bg-background rounded-3xl text-base">
+                          Instagram
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+    <footer class="bg-my-black text-background py-20 px-4">
+      <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  
+          <div class="mb-6 flex flex-col md:flex-row sm:items-center justify-items-start  justify-between">
+              <a class="text-3xl font-bold leading-none mb-4 sm:mb-0" href="#">
+                  <img src="../assets/giarddesign-white.png" alt="giarddesign logo" width="115" height="19" />
+              </a>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-items-start">
+                  <p class="text-left mb-4 sm:mb-0">Daj znać, co możemy dla Ciebie zrobić!</p>
+                  <a href=""><button class="ml-0 sm:ml-6 pt-3 pb-3.5 px-6 text-background bg-secondary rounded-3xl text-base">
+                    Skontaktuj się z nami
+                </button></a>
+              </div>
+          </div>
+          <hr class="border-t border-background my-6 sm:my-12">
+  
+          <div class="mb-6 flex flex-col sm:flex-row justify-between">
+              <ul class="flex flex-col lg:flex-row mb-6 sm:mb-0">
+                  <li class="mb-2"><a href="#" class="hover:text-gray-400 mr-12 ">Kontakt</a></li>
+                  <li class="mb-2"><a href="#" class="hover:text-gray-400 mr-12 ">Instagram</a></li>
+                  <li class="mb-2"><a href="#" class="hover:text-gray-400 mr-12 ">Facebook</a></li>
+                  <li class="mb-2"><a href="#" class="hover:text-gray-400 ">LinkedIn</a></li>
+              </ul>
+              <ul class="flex flex-col sm:flex-row">
+                  <li class="mb-2"><a href="tel:+000-000-000" class="mr-12">000-000-000</a></li>
+                  <li class="mb-2"><a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a></li>
+              </ul>
+          </div>
+  
+          <div class="flex flex-col sm:flex-row justify-between mt-12 sm:mt-28">
+              <p>Prawa zastrzeżone © 2022</p>
+              <p class="flex items-center mt-4 sm:mt-0">made by <span><img class="ml-4" src="../assets/logo-full-light.png" alt="logo adRespect"></span></p>
+          </div>
+      </div>
+  </footer>
+  
+
+  
+  
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#toggleForm:checked + label + #myForm {
+  display: block;
+}
+
+#toggleForm:checked + label > img {
+  display: none;
+}
+
+nav li a::after {
+  display: block;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  transition: width 200ms ease-in-out 0s;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.card-btn {
+  position: relative;
+}
+
+.card-btn::after {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: theme("colors.secondary");
+}
+
+.card {
+  transition: transform 300ms, box-shadow 300ms;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
